@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="View Product"
+        android:icon="@drawable/product_list_24"
+        android:id="@+id/product_List_Fragment"></item>
+    <item android:title="My Profile"
+        android:icon="@drawable/user_24"
+        android:id="@+id/userProfileFragment"></item>
+    <item android:title="My Order"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:id="@+id/userOrderFragment"></item>
+    <item android:title="My Cart"
+        android:icon="@drawable/ic_baseline_shopping_cart_24"
+        android:id="@+id/cartlistFragment"></item>
+
+</menu>

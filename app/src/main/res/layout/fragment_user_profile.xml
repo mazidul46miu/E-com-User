@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="User"
+            type="com.example.userapp.models.EcomUser" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserProfileFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"></ImageView>
+
+                <Button
+                    android:id="@+id/updateUpdateUser"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userImage"
+                    android:text="Update"
+                    android:textColor="@color/teal_200"></Button>
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/userImage"
+                    android:text="@{User.name == null? `not set` : User.name}"
+                    android:textSize="20dp"
+                    tools:text="user Name"></TextView>
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/editNameBtn"
+                    android:src="@drawable/ic_baseline_edit_24"
+                    android:layout_alignBottom="@+id/userName"
+                    android:layout_toEndOf="@+id/userName"
+                    android:layout_marginLeft="10dp">
+                </ImageButton>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/userPhone"
+                    tools:text="019125864512"
+                    android:textSize="20dp"
+                    android:layout_toEndOf="@+id/userImage"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/userName"
+                    android:layout_centerInParent="true"
+                    android:text="@{User.phoneNumber}">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="user@gmail.com"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toEndOf="@+id/userImage"
+                    android:layout_below="@+id/userPhone"
+                    android:layout_centerInParent="true"
+                    android:text="@{User.email}">
+                </TextView>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
